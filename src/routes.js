@@ -202,7 +202,8 @@ const routes = [
       {
         name: "género",
         description: "Filtro por géneros literarios",
-        href: "",
+        route: "/sections/navigation/pagination",
+        component: <Pagination />,
       },
       {
         name: "nivel educativo",
