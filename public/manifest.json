@@ -1,11 +1,11 @@
 {
-  "short_name": "Material Kit",
-  "name": "Material Kit 2 React",
+  "short_name": "Biblioteca_Turing",
+  "name": "Biblioteca_Turing",
   "icons": [
     {
-      "src": "favicon.png",
+      "src": "Libros_1.jpeg",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/png"
+      "type": "image/jpeg"
     }
   ],
   "start_url": ".",

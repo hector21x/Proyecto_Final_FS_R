@@ -1,17 +1,4 @@
-/*
-=========================================================
-* Material Kit 2 React - v2.0.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 
 // @mui material components
 import Container from "@mui/material/Container";
@@ -44,7 +31,7 @@ import routes from "routes";
 import footerRoutes from "footer.routes";
 
 // Images
-import bgImage from "assets/images/bg-presentation.jpg";
+import bgImage from "assets/images/Biblioteca_1.jpeg";
 
 function Presentation() {
   return (
@@ -53,8 +40,8 @@ function Presentation() {
         routes={routes}
         action={{
           type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
+          route: "",
+          label: "Regístrate",
           color: "info",
         }}
         sticky
@@ -74,7 +61,10 @@ function Presentation() {
           <Grid container item xs={12} lg={7} justifyContent="center" mx="auto">
             <MKTypography
               variant="h1"
+              textAlign="center"
               color="white"
+              fontWeight="bold"
+              text-shadow="2px 2px 2px black"
               mt={-6}
               mb={1}
               sx={({ breakpoints, typography: { size } }) => ({
@@ -83,17 +73,17 @@ function Presentation() {
                 },
               })}
             >
-              Material Kit 2 React{" "}
+              Biblioteca Comunitaria Alan Turing{" "}
             </MKTypography>
             <MKTypography
               variant="body1"
               color="white"
               textAlign="center"
+              text-shadow="1px 1px 1px black"
               px={{ xs: 6, lg: 12 }}
               mt={1}
             >
-              Free & Open Source Web UI Kit built over ReactJS &amp; MUI. Join over 1.6 million
-              developers around the world.
+              Compartamos el conocimiento, no cuesta nada y es muy fácil!
             </MKTypography>
           </Grid>
         </Container>
@@ -111,8 +101,8 @@ function Presentation() {
       >
         <Counters />
         <Information />
-        <DesignBlocks />
-        <Pages />
+        {/* <DesignBlocks /> */}
+        {/* <Pages /> */}
         <Container sx={{ mt: 6 }}>
           <BuiltByDevelopers />
         </Container>
@@ -123,57 +113,59 @@ function Presentation() {
                 variant="gradient"
                 color="info"
                 icon="flag"
-                title="Getting Started"
-                description="Check the possible ways of working with our product and the necessary files for building your own project."
+                title="BÚSQUEDAS Y DESCARGAS"
+                description="Encuentra tus obras literarias y descárgalas gratis, solo debes loguearte y compartir también las tuyas"
                 action={{
                   type: "external",
-                  route: "https://www.creative-tim.com/learning-lab/react/overview/material-kit/",
-                  label: "Let's start",
+                  route: "/sections/page-sections/page-headers",
+                  label: "Comienza hoy",
                 }}
               />
             </Grid>
             <Grid item xs={12} lg={4}>
               <FilledInfoCard
+                variant="gradient"
                 color="info"
-                icon="precision_manufacturing"
-                title="Plugins"
-                description="Get inspiration and have an overview about the plugins that we used to create the Material Kit."
+                icon="flag"
+                title="LECTURA ONLINE GRATUITA POR GÉNERO"
+                description="Encuentra miles de títulos títulos en línea sin loguearte, todos filtrados por género, nivel educativo, áreas de conocimiento y rango etario."
                 action={{
                   type: "external",
-                  route: "https://www.creative-tim.com/learning-lab/react/overview/datepicker/",
-                  label: "Read more",
+                  route: "",
+                  label: "Ver más",
                 }}
               />
             </Grid>
             <Grid item xs={12} lg={4}>
               <FilledInfoCard
+                variant="gradient"
                 color="info"
-                icon="apps"
-                title="Components"
-                description="Material Kit is giving you a lot of pre-made components, that will help you to build UI's faster."
+                icon="flag"
+                title="REGÍSTRATE"
+                description="Regístrate para poder descargar obras completas y resúmenes que encuentres en nuestro sitio."
                 action={{
                   type: "external",
-                  route: "https://www.creative-tim.com/learning-lab/react/alerts/material-kit/",
-                  label: "Read more",
+                  route: "",
+                  label: "Hazlo ahora!",
                 }}
               />
             </Grid>
           </Grid>
         </Container>
-        <Testimonials />
-        <Download />
-        <MKBox pt={18} pb={6}>
+        {/* <Testimonials />
+        <Download /> */}
+        {<MKBox pt={18} pb={6}>
           <Container>
             <Grid container spacing={3}>
-              <Grid item xs={12} lg={5} ml="auto" sx={{ textAlign: { xs: "center", lg: "left" } }}>
-                <MKTypography variant="h4" fontWeight="bold" mb={0.5}>
-                  Thank you for your support!
+              <Grid item xs={12} lg={5} ml="auto" sx={{ textAlign: { xs: "center", lg: "center" } }}>
+                <MKTypography variant="h4" fontWeight="bold" mb={0.5} textAlign="center">
+                  Gracias por visitar nuestro sitio y recuerda registrarte!
                 </MKTypography>
-                <MKTypography variant="body1" color="text">
-                  We deliver the best web products
+                <MKTypography variant="body1" color="text" textAlign="center">
+                  Te aseguramos una experiencia diferente!
                 </MKTypography>
               </Grid>
-              <Grid
+              {/* <Grid
                 item
                 xs={12}
                 lg={5}
@@ -210,10 +202,10 @@ function Presentation() {
                   <i className="fab fa-pinterest" />
                   &nbsp;Pin it
                 </MKSocialButton>
-              </Grid>
+              </Grid> */}
             </Grid>
           </Container>
-        </MKBox>
+        </MKBox>}
       </Card>
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />

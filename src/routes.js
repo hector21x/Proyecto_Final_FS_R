@@ -1,51 +1,13 @@
-/**
-=========================================================
-* Material Kit 2 React - v2.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-/** 
-  All of the routes for the Material Kit 2 React React are added here,
-  You can add a new route, customize the routes and delete the routes here.
-
-  Once you add a new route on this file it will be visible automatically on
-  the Navbar.
-
-  For adding a new route you can follow the existing routes in the routes array.
-  1. The `name` key is used for the name of the route on the Navbar.
-  2. The `icon` key is used for the icon of the route on the Navbar.
-  3. The `collapse` key is used for making a collapsible item on the Navbar that contains other routes
-  inside (nested routes), you need to pass the nested routes inside an array as a value for the `collapse` key.
-  4. The `route` key is used to store the route location which is used for the react router.
-  5. The `href` key is used to store the external links location.
-  6. The `component` key is used to store the component of its route.
-  7. The `dropdown` key is used to define that the item should open a dropdown for its collapse items .
-  8. The `description` key is used to define the description of
-          a route under its name.
-  9. The `columns` key is used to define that how the content should look inside the dropdown menu as columns,
-          you can set the columns amount based on this key.
-  10. The `rowsPerColumn` key is used to define that how many rows should be in a column.
-*/
 
 // @mui material components
 import Icon from "@mui/material/Icon";
 
 // @mui icons
-import GitHubIcon from "@mui/icons-material/GitHub";
+// import GitHubIcon from "@mui/icons-material/GitHub";
 
 // Pages
 import AboutUs from "layouts/pages/landing-pages/about-us";
 import ContactUs from "layouts/pages/landing-pages/contact-us";
-import Author from "layouts/pages/landing-pages/author";
 import SignIn from "layouts/pages/authentication/sign-in";
 
 // Sections
@@ -70,36 +32,31 @@ import Typography from "layouts/sections/elements/typography";
 
 const routes = [
   {
-    name: "pages",
+    name: "conócenos",
     icon: <Icon>dashboard</Icon>,
     columns: 1,
     rowsPerColumn: 2,
     collapse: [
       {
-        name: "landing pages",
+        name: "Organización",
         collapse: [
           {
-            name: "about us",
+            name: "Nosotros",
             route: "/pages/landing-pages/about-us",
             component: <AboutUs />,
           },
           {
-            name: "contact us",
+            name: "Contáctanos",
             route: "/pages/landing-pages/contact-us",
             component: <ContactUs />,
-          },
-          {
-            name: "author",
-            route: "/pages/landing-pages/author",
-            component: <Author />,
           },
         ],
       },
       {
-        name: "account",
+        name: "tu cuenta",
         collapse: [
           {
-            name: "sign in",
+            name: "Iniciar Sesión",
             route: "/pages/authentication/sign-in",
             component: <SignIn />,
           },
@@ -108,49 +65,49 @@ const routes = [
     ],
   },
   {
-    name: "sections",
+    name: "servicios",
     icon: <Icon>view_day</Icon>,
     collapse: [
       {
-        name: "page sections",
-        description: "See all sections",
+        name: "Búsquedas y descargas",
+        description: "Filtre sus obras y descárguelas",
         dropdown: true,
         collapse: [
           {
-            name: "page headers",
+            name: "Nacionales e Internacionales",
             route: "/sections/page-sections/page-headers",
             component: <PageHeaders />,
           },
           {
-            name: "features",
+            name: "Estrenos",
             route: "/sections/page-sections/features",
             component: <Features />,
           },
         ],
       },
       {
-        name: "navigation",
-        description: "See all navigations",
+        name: "Descargar Resúmenes",
+        description: "Filtre y descargue sus resúmenes",
         dropdown: true,
         collapse: [
           {
-            name: "navbars",
+            name: "Papers",
             route: "/sections/navigation/navbars",
             component: <Navbars />,
           },
           {
-            name: "nav tabs",
+            name: "Libros",
             route: "/sections/navigation/nav-tabs",
             component: <NavTabs />,
           },
-          {
+          /* {
             name: "pagination",
             route: "/sections/navigation/pagination",
             component: <Pagination />,
-          },
+          }, */
         ],
       },
-      {
+      /* {
         name: "input areas",
         description: "See all input areas",
         dropdown: true,
@@ -166,8 +123,8 @@ const routes = [
             component: <Forms />,
           },
         ],
-      },
-      {
+      }, */
+      /* {
         name: "attention catchers",
         description: "See all examples",
         dropdown: true,
@@ -188,8 +145,8 @@ const routes = [
             component: <TooltipsPopovers />,
           },
         ],
-      },
-      {
+      }, */
+      /* {
         name: "elements",
         description: "See all 32 examples",
         dropdown: true,
@@ -235,39 +192,34 @@ const routes = [
             component: <Typography />,
           },
         ],
-      },
+      }, */
     ],
   },
   {
-    name: "docs",
+    name: "Lectura gratuita Online",
     icon: <Icon>article</Icon>,
     collapse: [
       {
-        name: "getting started",
-        description: "All about overview, quick start, license and contents",
-        href: "https://www.creative-tim.com/learning-lab/react/quick-start/material-kit/",
+        name: "género",
+        description: "Filtro por géneros literarios",
+        href: "",
       },
       {
-        name: "foundation",
-        description: "See our colors, icons and typography",
-        href: "https://www.creative-tim.com/learning-lab/react/colors/material-kit/",
+        name: "nivel educativo",
+        description: "Filtro por niveles de la educación",
+        href: "",
       },
       {
-        name: "components",
-        description: "Explore our collection of fully designed components",
-        href: "https://www.creative-tim.com/learning-lab/react/alerts/material-kit/",
+        name: "áreas de conocimientos",
+        description: "Filtro por diferentes ciencias",
+        href: "",
       },
       {
-        name: "plugins",
-        description: "Check how you can integrate our plugins",
-        href: "https://www.creative-tim.com/learning-lab/react/datepicker/material-kit/",
+        name: "rango etario",
+        description: "Filtro por edad del lector",
+        href: "",
       },
     ],
-  },
-  {
-    name: "github",
-    icon: <GitHubIcon />,
-    href: "https://www.github.com/creativetimofficial/material-kit-react",
   },
 ];
 

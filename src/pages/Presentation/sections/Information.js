@@ -1,17 +1,4 @@
-/*
-=========================================================
-* Material Kit 2 React - v2.0.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 
 // @mui material components
 import Container from "@mui/material/Container";
@@ -42,21 +29,21 @@ function Information() {
                 icon="touch_app"
                 title={
                   <>
-                    Feel the
+                    Comienza a vivir
                     <br />
-                    Material Kit
+                    una experiencia diferente
                   </>
                 }
-                description="All the MUI components that you need in a development have been re-design with the new look."
+                description="Somos biblioteca comunitaria online gratuita más grande de Tucumán."
               />
               <RotatingCardBack
                 image={bgBack}
-                title="Discover More"
-                description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
+                title="Descubre más"
+                description="Regístrate y con solo compartir tus obras literarias, podrás acceder a las obras compartidas por nuestra comunidad."
                 action={{
                   type: "internal",
-                  route: "/sections/page-sections/page-headers",
-                  label: "start with header",
+                  route: "",
+                  label: "Regístrate",
                 }}
               />
             </RotatingCard>
@@ -65,33 +52,32 @@ function Information() {
             <Grid container spacing={3}>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="content_copy"
-                  title="Full Documentation"
-                  description="Built by developers for developers. Check the foundation and you will find
-                    everything inside our documentation."
+                  icon="devices"
+                  title="Género"
+                  description="Filtra por nuestros diferentes géneros literarios y encuentra lo que buscas."
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="flip_to_front"
-                  title="MUI Ready"
-                  description="The world's most popular react components library for building user interfaces."
+                  icon="devices"
+                  title="Nivel Educativo"
+                  description="Filtra por nivel educativo y encuentra la obra más adecuada para el nivel en el estudias."
                 />
               </Grid>
             </Grid>
             <Grid container spacing={3} sx={{ mt: { xs: 0, md: 6 } }}>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="price_change"
-                  title="Save Time & Money"
-                  description="Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System."
+                  icon="devices"
+                  title="Áreas de Conocmiento"
+                  description="Filtra por las variadas ciencias de las que se nutre nuestra comunidad."
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
                   icon="devices"
-                  title="Fully Responsive"
-                  description="Regardless of the screen size, the website content will naturally fit the given resolution."
+                  title="Rango Etario"
+                  description="Filtra por edad de acuerdo al nivel de dificultad que busques."
                 />
               </Grid>
             </Grid>

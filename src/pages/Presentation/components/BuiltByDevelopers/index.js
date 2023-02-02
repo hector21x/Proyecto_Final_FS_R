@@ -1,17 +1,4 @@
-/*
-=========================================================
-* Material Kit 2 React - v2.0.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 
 // @mui material components
 import Container from "@mui/material/Container";
@@ -46,19 +33,17 @@ function BuiltByDevelopers() {
       <Container>
         <Grid container item xs={12} lg={6} sx={{ ml: { xs: 0, lg: 6 } }}>
           <MKTypography variant="h4" color="white" fontWeight="bold">
-            Built by developers
+            Este sitio fue creado para diversos lectores
           </MKTypography>
           <MKTypography variant="h1" color="white" mb={1}>
-            Complex Documentation
+            Somos una gran comunidad
           </MKTypography>
           <MKTypography variant="body1" color="white" opacity={0.8} mb={2}>
-            From colors, cards, typography to complex elements, you will find the full
-            documentation. Play with the utility classes and you will create unlimited combinations
-            for our components.
+            Un lugar donde buscar y compartir las obras literarias que necesitas, sin importar si tienes o no los recursos para adquirlas.
           </MKTypography>
           <MKTypography
             component="a"
-            href="https://www.creative-tim.com/learning-lab/react/overview/material-kit/"
+            href="/pages/landing-pages/about-us"
             target="_blank"
             rel="noreferrer"
             variant="body2"
@@ -79,7 +64,7 @@ function BuiltByDevelopers() {
               },
             }}
           >
-            Read docs <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+            Conócenos <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
           </MKTypography>
         </Grid>
       </Container>

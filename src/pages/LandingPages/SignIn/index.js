@@ -1,17 +1,4 @@
-/**
-=========================================================
-* Material Kit 2 React - v2.0.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 
 import { useState } from "react";
 
@@ -26,7 +13,8 @@ import MuiLink from "@mui/material/Link";
 
 // @mui icons
 import FacebookIcon from "@mui/icons-material/Facebook";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
 import GoogleIcon from "@mui/icons-material/Google";
 
 // Material Kit 2 React components
@@ -54,12 +42,6 @@ function SignInBasic() {
     <>
       <DefaultNavbar
         routes={routes}
-        action={{
-          type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
-          color: "info",
-        }}
         transparent
         light
       />
@@ -97,21 +79,26 @@ function SignInBasic() {
                 textAlign="center"
               >
                 <MKTypography variant="h4" fontWeight="medium" color="white" mt={1}>
-                  Sign in
+                  Iniciar Sesión
                 </MKTypography>
                 <Grid container spacing={3} justifyContent="center" sx={{ mt: 1, mb: 2 }}>
                   <Grid item xs={2}>
-                    <MKTypography component={MuiLink} href="#" variant="body1" color="white">
+                    <MKTypography component={MuiLink} href="https://www.facebook.com/Hector21x" variant="body1" color="white">
                       <FacebookIcon color="inherit" />
                     </MKTypography>
                   </Grid>
                   <Grid item xs={2}>
-                    <MKTypography component={MuiLink} href="#" variant="body1" color="white">
-                      <GitHubIcon color="inherit" />
+                    <MKTypography component={MuiLink} href="https://www.instagram.com/hector21x/" variant="body1" color="white">
+                      <InstagramIcon color="inherit" />
                     </MKTypography>
                   </Grid>
                   <Grid item xs={2}>
-                    <MKTypography component={MuiLink} href="#" variant="body1" color="white">
+                    <MKTypography component={MuiLink} href="https://twitter.com/?lang=es" variant="body1" color="white">
+                      <TwitterIcon color="inherit" />
+                    </MKTypography>
+                  </Grid>
+                  <Grid item xs={2}>
+                    <MKTypography component={MuiLink} href="https://news.google.com/home?tab=mn&hl=es-419&gl=AR&ceid=AR:es-419" variant="body1" color="white">
                       <GoogleIcon color="inherit" />
                     </MKTypography>
                   </Grid>
@@ -134,17 +121,17 @@ function SignInBasic() {
                       onClick={handleSetRememberMe}
                       sx={{ cursor: "pointer", userSelect: "none", ml: -1 }}
                     >
-                      &nbsp;&nbsp;Remember me
+                      &nbsp;&nbsp;Recuérdame
                     </MKTypography>
                   </MKBox>
                   <MKBox mt={4} mb={1}>
                     <MKButton variant="gradient" color="info" fullWidth>
-                      sign in
+                      ingresar
                     </MKButton>
                   </MKBox>
                   <MKBox mt={3} mb={1} textAlign="center">
                     <MKTypography variant="button" color="text">
-                      Don&apos;t have an account?{" "}
+                      No tenés una cuenta?{" "}
                       <MKTypography
                         component={Link}
                         to="/authentication/sign-up/cover"
@@ -153,7 +140,7 @@ function SignInBasic() {
                         fontWeight="medium"
                         textGradient
                       >
-                        Sign up
+                        Cerrar Sesión
                       </MKTypography>
                     </MKTypography>
                   </MKBox>
