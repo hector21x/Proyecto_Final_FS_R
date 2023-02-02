@@ -41,7 +41,7 @@ function Presentation() {
         action={{
           type: "external",
           route: "",
-          label: "Regístrate",
+          label: "Iniciar Sesión",
           color: "info",
         }}
         sticky
