@@ -69,7 +69,7 @@ function Team() {
                 image={team2}
                 name="Nicolás Íñigo"
                 position={{ color: "info", label: "Back-End Developer" }}
-                description="Estudiante de Ingeniería de la UTN-FRT."
+                description="Estudiante avanzado de Ing. Mecánica de la UTN-FRT de 29 años. B1 Speaker English. Process Developer"
               />
             </MKBox>
           </Grid>
