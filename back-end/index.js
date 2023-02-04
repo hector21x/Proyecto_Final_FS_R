@@ -1,18 +1,6 @@
-'use strict';
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+const app = require('./app.js');
 const mongoDBConnect = require('./config/mongo.js');
-const router = require('./router/user.js');
 
-const app = express();
-
-app.use(bodyParser.json());
-
-
-app.use(cors());
-app.use(express.json());
-app.use('/api',router);
 
 mongoDBConnect();
 
