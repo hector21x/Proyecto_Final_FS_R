@@ -5,13 +5,13 @@
   "author": "English_Friends",
   "license": "See license in https://www.frt.utn.edu.ar",
   "description": "Comunidad para compartir libros",
-  "homepage": "https://demos.creative-tim.com/material-kit-react/#/",
+  "homepage": "",
   "bugs": {
-    "url": "https://github.com/creativetimofficial/ct-material-kit-react/issues"
+    "url": "http://localhost:3000/public/Error404.html"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativetimofficial/ct-material-kit-react.git"
+    "url": "git+https://github.com/hector21x/Proyecto_Final_FS_R"
   },
   "engines": {
     "node": "14 || 15 || 16",
