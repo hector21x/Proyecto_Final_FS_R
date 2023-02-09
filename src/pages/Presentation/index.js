@@ -1,16 +1,14 @@
-
-
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 
-// Material Kit 2 React components
+// React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
-import MKSocialButton from "components/MKSocialButton";
+// import MKSocialButton from "components/MKSocialButton";
 
-// Material Kit 2 React examples
+// React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
@@ -18,10 +16,11 @@ import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 // Presentation page sections
 import Counters from "pages/Presentation/sections/Counters";
 import Information from "pages/Presentation/sections/Information";
-import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
+import SignIn from "layouts/pages/authentication/sign-in";
+/* import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
 import Pages from "pages/Presentation/sections/Pages";
 import Testimonials from "pages/Presentation/sections/Testimonials";
-import Download from "pages/Presentation/sections/Download";
+import Download from "pages/Presentation/sections/Download"; */
 
 // Presentation page components
 import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
@@ -40,7 +39,8 @@ function Presentation() {
         routes={routes}
         action={{
           type: "external",
-          route: "",
+          route: "/pages/authentication/sign-in",
+          component: <SignIn />,
           label: "Iniciar Sesión",
           color: "info",
         }}
@@ -154,7 +154,7 @@ function Presentation() {
         </Container>
         {/* <Testimonials />
         <Download /> */}
-        {<MKBox pt={18} pb={6}>
+        <MKBox pt={18} pb={6}>
           <Container>
             <Grid container spacing={3}>
               <Grid item xs={12} lg={5} ml="auto" sx={{ textAlign: { xs: "center", lg: "center" } }}>
@@ -205,7 +205,7 @@ function Presentation() {
               </Grid> */}
             </Grid>
           </Container>
-        </MKBox>}
+        </MKBox>
       </Card>
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />

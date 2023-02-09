@@ -33,10 +33,10 @@ import routes from "routes";
 // Images
 import bgImage from "assets/images/bg-sign-in-basic.jpeg";
 
-function Register() {
-  const [rememberMe, setRememberMe] = useState(false);
+function RegisterBasic() {
+  /* const [rememberMe, setRememberMe] = useState(false);
 
-  const handleSetRememberMe = () => setRememberMe(!rememberMe);
+  const handleSetRememberMe = () => setRememberMe(!rememberMe); */
 
   return (
     <>
@@ -166,4 +166,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default RegisterBasic;

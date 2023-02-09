@@ -5,9 +5,9 @@
   "author": "English_Friends",
   "license": "See license in https://www.frt.utn.edu.ar",
   "description": "Comunidad para compartir libros",
-  "homepage": "",
+  "homepage": "http://localhost:3000/presentation",
   "bugs": {
-    "url": "http://localhost:3000/public/Error404.html"
+    "url": "http://localhost:3000/presentation"
   },
   "repository": {
     "type": "git",

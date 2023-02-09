@@ -32,6 +32,7 @@ import routes from "routes";
 
 // Images
 import bgImage from "assets/images/bg-sign-in-basic.jpeg";
+import Register from "layouts/pages/authentication/register";
 // import Register from "../Register";
 
 function SignInBasic() {
@@ -131,8 +132,10 @@ function SignInBasic() {
                     </MKButton>
                   </MKBox>
                   <MKBox mt={3} mb={1} textAlign="center">
-                    <MKTypography variant="button" color="text">
-                      No tenés una cuenta?{""}
+                    <MKTypography variant="button" color="text"
+                     component="a"
+                     href="/pages/landing-pages/register">
+                      No tenés una cuenta?
                       <MKTypography
                         component={Link}
                         to="/authentication/sign-up/cover"

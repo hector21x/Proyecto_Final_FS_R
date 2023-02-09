@@ -12,6 +12,7 @@ import RotatingCard from "examples/Cards/RotatingCard";
 import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
 import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
 import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
+import Register from "layouts/pages/authentication/register";
 
 // Images
 import bgFront from "assets/images/rotating-card-bg-front.jpeg";
@@ -41,8 +42,9 @@ function Information() {
                 title="Descubre más"
                 description="Regístrate y con solo compartir tus obras literarias, podrás acceder a las obras compartidas por nuestra comunidad."
                 action={{
-                  type: "internal",
-                  route: "",
+                  type: "external",
+                  route: "/pages/authentication/register",
+                  component: <Register />,
                   label: "Regístrate",
                 }}
               />
