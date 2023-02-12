@@ -31,6 +31,7 @@ import footerRoutes from "footer.routes";
 
 // Images
 import bgImage from "assets/images/Biblioteca_1.jpeg";
+import Register from "layouts/pages/authentication/register";
 
 function Presentation() {
   return (
@@ -143,9 +144,11 @@ function Presentation() {
                 icon="flag"
                 title="REGÍSTRATE"
                 description="Regístrate para poder descargar obras completas y resúmenes que encuentres en nuestro sitio."
+                routes={routes}
                 action={{
                   type: "external",
-                  route: "",
+                  route: "/pages/authentication/register",
+                  component: <Register />,
                   label: "Hazlo ahora!",
                 }}
               />

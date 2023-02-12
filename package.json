@@ -5,7 +5,7 @@
   "author": "English_Friends",
   "license": "See license in https://www.frt.utn.edu.ar",
   "description": "Comunidad para compartir libros",
-  "homepage": "http://localhost:3000/presentation",
+  "homepage": "",
   "bugs": {
     "url": "http://localhost:3000/presentation"
   },
@@ -27,6 +27,7 @@
     "@testing-library/jest-dom": "5.11.4",
     "@testing-library/react": "11.1.0",
     "@testing-library/user-event": "12.1.10",
+    "axios": "^1.3.2",
     "chroma-js": "2.1.2",
     "flatpickr": "4.6.9",
     "prop-types": "15.7.2",

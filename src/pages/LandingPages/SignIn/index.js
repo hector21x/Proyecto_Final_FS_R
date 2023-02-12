@@ -1,51 +1,83 @@
 
 
 import { useState } from "react";
+import { login } from "../Service/apiCall_login.js";
 
 // react-router-dom components
 import { Link } from "react-router-dom";
 
-// @mui material components
+// components
 import Card from "@mui/material/Card";
 import Switch from "@mui/material/Switch";
 import Grid from "@mui/material/Grid";
 import MuiLink from "@mui/material/Link";
+import Icon from "@mui/material/Icon";
 
-// @mui icons
+// icons
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GoogleIcon from "@mui/icons-material/Google";
 
-// Material Kit 2 React components
+// React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
 
-// Material Kit 2 React example components
+// React example components
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import SimpleFooter from "examples/Footers/SimpleFooter";
 
-// Material Kit 2 React page layout routes
+// React page layout routes
 import routes from "routes";
 
 // Images
-import bgImage from "assets/images/bg-sign-in-basic.jpeg";
-import Register from "layouts/pages/authentication/register";
-// import Register from "../Register";
+import bgImage from "assets/images/Biblioteca_16.jpeg";
+import Register from "../Register";
 
 function SignInBasic() {
   const [rememberMe, setRememberMe] = useState(false);
 
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
 
+  const [formValues, setFormValues] = useState({
+    email:"",
+    password:""
+
+  });
+  const handleChange = (event) => {
+    setFormValues({
+      ...formValues,
+      [event.target.name]: event.target.value
+    })
+
+  }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const saveUser = () => {
+      login(formValues).then(() => {
+        console.log("Logueado");
+      }).catch((error) => alert("Error al loguear el usuario"));
+
+    }
+    saveUser();
+  } 
+
   return (
     <>
       <DefaultNavbar
         routes={routes}
+        action={{
+          type: "internal",
+          route: "/pages/authentication/register",
+          component: <Register />,
+          label: "Regístrate",
+          color: "info",
+        }}
         transparent
         light
+        sticky
       />
       <MKBox
         position="absolute"
@@ -107,12 +139,12 @@ function SignInBasic() {
                 </Grid>
               </MKBox>
               <MKBox pt={4} pb={3} px={3}>
-                <MKBox component="form" role="form">
+                <MKBox component="form" role="form" onSubmit={handleSubmit}>
                   <MKBox mb={2}>
-                    <MKInput type="email" label="Email" fullWidth />
+                    <MKInput type="email" label="Email" name="email" value={formValues.email} onChange={handleChange} required fullWidth />
                   </MKBox>
                   <MKBox mb={2}>
-                    <MKInput type="password" label="Password" fullWidth />
+                    <MKInput type="password" label="Password" name="password" value={formValues.password} onChange={handleChange} required fullWidth />
                   </MKBox>
                   <MKBox display="flex" alignItems="center" ml={-1}>
                     <Switch checked={rememberMe} onChange={handleSetRememberMe} />
@@ -127,15 +159,21 @@ function SignInBasic() {
                     </MKTypography>
                   </MKBox>
                   <MKBox mt={4} mb={1}>
-                    <MKButton variant="gradient" color="info" fullWidth>
+                    <MKButton type="submit" variant="gradient" color="info" fullWidth>
                       ingresar
                     </MKButton>
                   </MKBox>
                   <MKBox mt={3} mb={1} textAlign="center">
                     <MKTypography variant="button" color="text"
-                     component="a"
-                     href="/pages/landing-pages/register">
-                      No tenés una cuenta?
+                    component="a"
+                    href="/pages/authentication/register"
+                    // target="_blank"
+                    rel="noreferrer"
+                    variant="body2"
+                    color="black"
+                    fontWeight="regular"
+                    >
+                      Aún no tenés una cuenta? <Icon sx={{ fontWeight: "bold" }}></Icon>
                       <MKTypography
                         component={Link}
                         to="/authentication/sign-up/cover"

@@ -4,7 +4,7 @@ import { useEffect } from "react";
 // import { Routes, Route, useLocation } from "react-router-dom";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
-// @mui material components
+// components
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
@@ -39,14 +39,15 @@ export default function App() {
     });
 
   return (
+   
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Routes>
         {getRoutes(routes)}
         <Route path="/presentation" element={<Presentation />} />
         <Route path="*" element={<Navigate to="/presentation" />} />
-        {/* <Route path="*" element={<NotFound />} /> */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
-    </ThemeProvider>
+      </ThemeProvider>
   );
 }

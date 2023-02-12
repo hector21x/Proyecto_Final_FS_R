@@ -1,11 +1,11 @@
 
 
-// @mui material components
+// components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Tooltip from "@mui/material/Tooltip";
 
-// Material Kit 2 React components
+// React components
 import MKBox from "components/MKBox";
 import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
@@ -37,22 +37,20 @@ function Download() {
         <Container sx={{ position: "relative", zIndex: 2, py: 12 }}>
           <Grid container item xs={12} md={7} justifyContent="center" mx="auto" textAlign="center">
             <MKTypography variant="h3" color="white">
-              Do you love this awesome
+              Esto es increible
             </MKTypography>
             <MKTypography variant="h3" color="white" mb={1}>
-              UI Kit for ReactJS &amp; MUI?
+              Quieres tener nuestros títulos
             </MKTypography>
             <MKTypography variant="body2" color="white" mb={6}>
-              Cause if you do, it can be yours for FREE. Hit the button below to navigate to
-              Creative Tim where you can find the Design System in HTML. Start a new project or give
-              an old Bootstrap project a new look!
+              Todo de uso gratuito
             </MKTypography>
             <MKButton
               variant="gradient"
               color="info"
               size="large"
               component="a"
-              href="https://www.creative-tim.com/product/material-kit-react"
+              href=""
               sx={{ mb: 2 }}
             >
               Download Now
@@ -71,12 +69,12 @@ function Download() {
                 <Tooltip title="Bootstrap 5 - Most popular front-end component library">
                   <MKBox
                     component="a"
-                    href="https://www.creative-tim.com/product/material-kit"
+                    href=""
                     target="_blank"
                   >
                     <MKBox
                       component="img"
-                      src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/bootstrap5.jpg"
+                      src=""
                       width="100%"
                     />
                   </MKBox>
@@ -137,7 +135,7 @@ function Download() {
                 <Tooltip title="Comming soon">
                   <MKBox
                     component="a"
-                    href="https://www.creative-tim.com/product/material-kit-react"
+                    href=""
                     target="_blank"
                   >
                     <MKBox

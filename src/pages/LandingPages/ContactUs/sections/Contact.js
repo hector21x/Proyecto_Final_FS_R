@@ -1,33 +1,43 @@
-/*
-=========================================================
-* Material Kit 2 React - v2.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// @mui material components
+import { useState } from "react";
+import { message } from "pages/LandingPages/Service/apiMessage.js";
+// components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
-// Material Kit 2 React components
+// React components
 import MKBox from "components/MKBox";
 import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
-import SelectionUs from "./SelectionUs";
+// import SelectionUs from "./SelectionUs";
 
 // Images
 import bgImage from "assets/images/Biblioteca_9.jpeg";
 
 function Contact() {
+  const [formValues, setFormValues] = useState({
+    operador:"",
+    client_name:"",
+    message_body:""
+
+  });
+  const handleChange = (event) => {
+    setFormValues({
+      ...formValues,
+      [event.target.name]: event.target.value
+    })
+
+  }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const saveClient = () => {
+      message(formValues).then(() => {
+        console.log("Registrado");
+      }).catch((error) => alert("Error al registrar el usuario"));
+
+    }
+    saveClient();
+  } 
   return (
     <MKBox component="section" py={{ xs: 0, lg: 6 }}>
       <Container>
@@ -136,7 +146,7 @@ function Contact() {
                 </MKBox>
               </Grid>
               <Grid item xs={12} lg={7}>
-                <MKBox component="form" p={2} method="post">
+                <MKBox component="form" p={2} method="post" onSubmit={handleSubmit}>
                   <MKBox px={3} py={{ xs: 2, sm: 6 }}>
                     <MKTypography variant="h2" mb={1}>
                       Hola, cómo estás?
@@ -148,29 +158,38 @@ function Contact() {
                   <MKBox pt={0.5} pb={3} px={3}>
                     <Grid container>
                       <Grid item xs={12} pr={1} mb={6}>
-                      <SelectionUs/>
+                      <MKInput
+                          type="text"
+                          variant="standard"
+                          label="Estoy buscando a"
+                          placeholder="Quiero dejar un mensaje a..."
+                          name="operador"
+                          value={formValues.operador} onChange={handleChange} required
+                          InputLabelProps={{ shrink: true }}
+                          fullWidth
+                        />  
+                      {/* <SelectionUs/> */}
                       </Grid>
                       <Grid item xs={12} pr={1} mb={6}>
                       <MKInput
+                          type="text"
                           variant="standard"
                           label="Mi nombre es"
                           placeholder="Nombre Completo"
+                          name="client_name"
+                          value={formValues.client_name} onChange={handleChange} required
                           InputLabelProps={{ shrink: true }}
                           fullWidth
                         />
-                        {/* <MKInput
-                          variant="standard"
-                          label="Estoy buscando a"
-                          placeholder="Quiero dirigirme a..."
-                          InputLabelProps={{ shrink: true }}
-                          fullWidth
-                        /> */}
                       </Grid>
                       <Grid item xs={12} pr={1} mb={6}>
                         <MKInput
+                          type="text"
                           variant="standard"
                           label="Deje su mensaje"
                           placeholder="Quiero decir que..."
+                          name="message_body"
+                          value={formValues.message_body} onChange={handleChange} required
                           InputLabelProps={{ shrink: true }}
 
                           fullWidth
@@ -188,7 +207,7 @@ function Contact() {
                       textAlign="right"
                       ml="auto"
                     >
-                      <MKButton variant="gradient" color="info">
+                      <MKButton type="submit" variant="gradient" color="info">
                         Enviar Mensaje
                       </MKButton>
                     </Grid>

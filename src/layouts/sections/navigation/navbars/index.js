@@ -1,6 +1,6 @@
 
 
-// Material Kit 2 React components
+// React components
 import MKBox from "components/MKBox";
 
 // Sections components

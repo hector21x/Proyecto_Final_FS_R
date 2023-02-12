@@ -2,11 +2,11 @@
 // react-router-dom components
 import { Link } from "react-router-dom";
 
-// @mui material components
+// components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
-// Material Kit 2 React components
+// React components
 import MKBox from "components/MKBox";
 import MKBadge from "components/MKBadge";
 import MKTypography from "components/MKTypography";
@@ -64,11 +64,10 @@ function DesignBlocks() {
             sx={{ mb: 2 }}
           />
           <MKTypography variant="h2" fontWeight="bold">
-            Huge collection of sections
+            Sección de colección
           </MKTypography>
           <MKTypography variant="body1" color="text">
-            We have created multiple options for you to put together and customise into pixel
-            perfect pages.
+            Organización sin fines de lucro.
           </MKTypography>
         </Grid>
       </Container>

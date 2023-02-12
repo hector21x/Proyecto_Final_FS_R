@@ -3,11 +3,11 @@
 // react-router-dom components
 import { Link } from "react-router-dom";
 
-// @mui material components
+// components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
-// Material Kit 2 React components
+// React components
 import MKBox from "components/MKBox";
 import MKBadge from "components/MKBadge";
 import MKTypography from "components/MKTypography";
@@ -65,11 +65,10 @@ function Pages() {
           <Grid item xs={12} lg={3}>
             <MKBox position="sticky" top="100px" pb={{ xs: 2, lg: 6 }}>
               <MKTypography variant="h3" fontWeight="bold" mb={1}>
-                Presentation Pages for Company, Landing Pages, Blogs and Support
+                Presentación de la Biblioteca
               </MKTypography>
               <MKTypography variant="body2" fontWeight="regular" color="secondary" mb={1} pr={2}>
-                These is just a small selection of the multiple possibitilies you have. Focus on the
-                business, not on the design.
+                Diseño
               </MKTypography>
             </MKBox>
           </Grid>

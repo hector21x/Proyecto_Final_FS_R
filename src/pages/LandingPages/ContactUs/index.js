@@ -1,15 +1,15 @@
 
-// @mui material components
+//  components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 
-// Material Kit 2 React components
+// React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 // import MKButton from "components/MKButton";
 
-// Material Kit 2 React examples
+// React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 
@@ -34,22 +34,6 @@ function ContactUs() {
         transparent
         light
       />
-      {/* <MKBox bgColor="white">
-        <MKBox
-          minHeight="25rem"
-          width="100%"
-          sx={{
-            backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
-              `${linearGradient(
-                rgba(gradients.dark.main, 0.8),
-                rgba(gradients.dark.state, 0.8)
-              )}, url(${bgImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            display: "grid",
-            placeItems: "center",
-          }}
-          /> */}
           <MKBox
         minHeight="75vh"
         width="100%"

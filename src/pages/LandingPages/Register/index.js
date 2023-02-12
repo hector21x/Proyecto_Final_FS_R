@@ -1,6 +1,7 @@
 
 
 import { useState } from "react";
+import { register } from "../Service/apiCall.js";
 
 // react-router-dom components
 import { Link } from "react-router-dom";
@@ -17,31 +18,59 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GoogleIcon from "@mui/icons-material/Google";
 
-// Material Kit 2 React components
+// React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
 
-// Material Kit 2 React example components
+// React example components
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import SimpleFooter from "examples/Footers/SimpleFooter";
 
-// Material Kit 2 React page layout routes
+// React page layout routes
 import routes from "routes";
 
 // Images
-import bgImage from "assets/images/bg-sign-in-basic.jpeg";
+import bgImage from "assets/images/Biblioteca_16.jpeg";
+import SignIn from "../SignIn";
 
-function RegisterBasic() {
-  /* const [rememberMe, setRememberMe] = useState(false);
+const RegisterBasic = () => {
+  
+  const [formValues, setFormValues] = useState({
+    user_name:"",
+    email:"",
+    password:""
 
-  const handleSetRememberMe = () => setRememberMe(!rememberMe); */
+  });
+  const handleChange = (event) => {
+    setFormValues({
+      ...formValues,
+      [event.target.name]: event.target.value
+    })
 
+  }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const saveUser = () => {
+      register(formValues).then(() => {
+        console.log("Registrado");
+      }).catch((error) => alert("Error al registrar el usuario"));
+
+    }
+    saveUser();
+  } 
   return (
     <>
       <DefaultNavbar
         routes={routes}
+        action={{
+          type: "internal",
+          route: "/pages/authentication/sign-in",
+          component: <SignIn />,
+          label: "Iniciar Sesión",
+          color: "info",
+        }}
         transparent
         light
       />
@@ -105,21 +134,15 @@ function RegisterBasic() {
                 </Grid>
               </MKBox>
               <MKBox pt={4} pb={3} px={3}>
-                <MKBox component="form" role="form">
+                <MKBox component="form" role="form" onSubmit={handleSubmit}>
                 <MKBox mb={2}>
-                    <MKInput type="text" label="Nombre" id="user_name" fullWidth />
+                    <MKInput type="text" label="Usuario" name="user_name" value={formValues.user_name} onChange={handleChange} required fullWidth />
                   </MKBox>
                   <MKBox mb={2}>
-                    <MKInput type="text" label="Apellido" id="user_lastname" fullWidth />
+                    <MKInput type="email" label="Email" name="email" value={formValues.email} onChange={handleChange} required fullWidth />
                   </MKBox>
                   <MKBox mb={2}>
-                    <MKInput type="number" label="Edad" id="user_age" fullWidth />
-                  </MKBox>
-                  <MKBox mb={2}>
-                    <MKInput type="email" label="Email" id="email" fullWidth />
-                  </MKBox>
-                  <MKBox mb={2}>
-                    <MKInput type="password" label="Password" id="password" fullWidth />
+                    <MKInput type="password" label="Password" name="password" value={formValues.password} onChange={handleChange} required fullWidth />
                   </MKBox>
                   {/* <MKBox display="flex" alignItems="center" ml={-1}>
                     <Switch checked={rememberMe} onChange={handleSetRememberMe} />
@@ -134,9 +157,10 @@ function RegisterBasic() {
                     </MKTypography>
                   </MKBox> */}
                   <MKBox mt={4} mb={1}>
-                    <MKButton variant="gradient" color="info" id="Btn_Register" fullWidth>
+                    {/* <button>Registarme</button> */}
+                      <MKButton type="submit" variant="gradient" color="info" fullWidth>
                       Registrarme
-                    </MKButton>
+                      </MKButton>
                   </MKBox>
                  {/*  <MKBox mt={3} mb={1} textAlign="center">
                     <MKTypography variant="button" color="text">
